@@ -1,0 +1,24 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: sw-planet-api
+  datasource:
+    url: jdbc:mysql://localhost:3306/planet_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: false
+
+spring-doc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /
+    disable-swagger-default-url: true

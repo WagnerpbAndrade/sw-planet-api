@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  planet_db:
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - planet_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: planet_db
+    ports:
+      - 3306:3306
+
+volumes:
+  planet_db:
+    driver: "local"
