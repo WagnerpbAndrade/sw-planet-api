@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: sw-planet-api
+  flyway:
+    url: jdbc:mysql://localhost:3306/planet_db?createDatabaseIfNotExist=true
+    user: root
+    password: root
+    schemas:
+      - planet_db
   datasource:
     url: jdbc:mysql://localhost:3306/planet_db
     username: root
