@@ -5,13 +5,13 @@ spring:
   application:
     name: sw-planet-api
   flyway:
-    url: jdbc:mysql://localhost:3306/planet_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/starwars_db?createDatabaseIfNotExist=true
     user: root
     password: root
     schemas:
-      - planet_db
+      - starwars_db
   datasource:
-    url: jdbc:mysql://localhost:3306/planet_db
+    url: jdbc:mysql://localhost:3306/starwars_db
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
