@@ -13,4 +13,6 @@ public interface PlanetMapper {
     PlanetOutDTO toDTO(PlanetDomain planetDomain);
 
     PlanetEntity toEntity(PlanetDomain planetDomain);
+
+    PlanetDomain toDomain(PlanetEntity planetEntity);
 }

@@ -15,13 +15,11 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 public class PlanetGatewayImpl implements PlanetGateway {
-
     private final PlanetRepository planetRepository;
     private final PlanetMapper planetMapper;
-
     @Override
-    public void save(PlanetDomain planetDomain) {
-        planetRepository.save(planetMapper.toEntity(planetDomain));
+    public PlanetDomain save(PlanetDomain planetDomain) {
+        return planetMapper.toDomain(planetRepository.save(planetMapper.toEntity(planetDomain)));
     }
 
     @Override

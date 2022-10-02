@@ -12,14 +12,11 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @Slf4j
 public class PlanetUseCase {
-
     private final PlanetGateway planetGateway;
-
-    public void newPlanet(final PlanetDomain planetDomain) {
+    public PlanetDomain newPlanet(final PlanetDomain planetDomain) {
         log.info("Creating new planet");
-        planetGateway.save(planetDomain.toBuilder()
+        return planetGateway.save(planetDomain.toBuilder()
                 .createdAt(LocalDateTime.now())
                 .build());
-        log.info("Planet added successfully");
     }
 }

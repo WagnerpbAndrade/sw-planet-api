@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public interface PlanetGateway {
 
-    void save(PlanetDomain planetDomain);
+    PlanetDomain save(PlanetDomain planetDomain);
 
     Page<PlanetDomain> findAll(Pageable pageable);
 
